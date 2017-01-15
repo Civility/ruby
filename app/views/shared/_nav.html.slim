@@ -1,0 +1,21 @@
+/ Navigation
+nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
+    .container
+        / Brand
+        .navbar-header.page-scroll
+            button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+                span.sr-only Toggle navigation
+                | Меню
+                i.fa.fa-bars
+            a.navbar-brand href="#page-top"  Проект на Ruby
+        / nav
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+                li.hidden
+                    a href="#page-top"
+                li.page-scroll
+                    a href="#about" Что знаем
+                li.page-scroll
+                    a href="#contact" Регистрация
+            /.navbar-collapse
+            /.container-fluid

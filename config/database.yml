@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: experteese_admin
+  password: password
+  pool: 5
+# указание какая база отвечает за разраб.
+development:  
+# берем дефолтные настройки
+  <<: *default
+# подключение к бд
+  database: experteese_development
+
+production:
+  <<: *default
+  database: experteese_production
+
+test:
+  <<: *default
+  database: experteese_test
