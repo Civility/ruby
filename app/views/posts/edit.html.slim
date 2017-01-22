@@ -1,11 +1,13 @@
 .container
   .col-lg-12.posts-header.text-center
-    h1 Редактор поста
+    h1 = t('.title')
 .col-lg-12.center-block
   == render 'form'
-
-  button.btn.btn-default = link_to 'Показать пост', @post
-  |
-  i.fa.fa-arrows-h
-  button.btn.btn-default = link_to 'Обратно', posts_path
+  br
+.container
+  .col-lg-6.center-block
+    button.btn.btn-default = link_to t('.edit.show_post'), @post
+    |
+    i.fa.fa-arrows-h
+    button.btn.btn-default = link_to t('posts.new.back'), posts_path
 

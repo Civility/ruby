@@ -11,6 +11,6 @@
 
 .container
   .col-lg-12
-    button.btn.btn-default = link_to 'править', edit_post_path(@post)
+    button.btn.btn-default = link_to t('.show.fix'), edit_post_path(@post)
     i.fa.fa-arrows-h
-    button.btn.btn-default = link_to 'обратно', posts_path
+    button.btn.btn-default = link_to t('posts.new.back'), posts_path

@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    models:
+      post: 'Посты'
+    attributes:
+      post:
+        title: 'Заголовок'
+        summary: 'Тематика'
+        body: 'Cодержание'
+    errors:
+      messages:
+        blank: "Не может быть пустым"
+    helpers:
+      link:
+        destroy: 'Удалить'
+        edit: 'Править'
+        show: 'Показать'

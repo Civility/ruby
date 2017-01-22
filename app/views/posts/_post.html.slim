@@ -1,0 +1,17 @@
+/по соглашению RoR вывел c posts/index.html/slim
+/масив при этом можно убрать .т.к. рельсы сами это делают
+/- @posts.each do |post|
+tr
+  td = post.id
+  td = post.title
+  td = post.summary
+  td = post.body
+  td = post.created_at.to_date.strftime("%d %B %Y")
+  td
+    = link_to posts_path(post), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do
+      = fa_icon 'info'
+    = link_to edit_post_path(post), class: 'btn btn-xs', title: "#{ t('.edit', default: t('helpers.links.edit')) }" do
+      = fa_icon 'pencil'
+    = link_to post_path(post), method: :delete, data: {confirm: t('.confirm', default: t('helpers.links.confirm', default: 'Точно?'))}, class: 'btn btn-xs', title: "#{ t('.destroy', default: t('helpers.links.destroy')) }" do
+      = fa_icon 'remove'
+  /= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary'

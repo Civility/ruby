@@ -1,23 +1,26 @@
 .container
   .col-lg-12
-    = form_for @post do |f|
+    = form_for @post, html: {multipart: true} do |f|
       - if @post.errors.any?
-        #error_explanation
-          h2 = "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+        .alert.alert-danger
+          /#error_explanation
+          h6 = t( "#{pluralize(@post.errors.count, '.errors!')} ")
           ul
             - @post.errors.full_messages.each do |message|
               li = message
       .container
         .col-lg-12
           form
-            .form-group.field
-              =' f.label :title
-              =' f.text_field :title
-            .form-group.field
-              =' f.label :summary
-              =' f.text_area :summary
-            .form-group.field
-              =' f.label :body
-              =' f.text_area :body
-
-            button.btn.btn-default.actions =' f.submit 'Сохранить'
+            .form-group
+              .input-group-addon = f.label :title
+              .form-control = f.text_field :title
+            .form-group
+              .input-group-addon =' f.label :summary
+              .form-control =' f.text_area :summary
+            .form-group
+              .input-group-addon =' f.label :body
+              .form-control =' f.text_area :body
+            .form-group
+               =' f.file_field :image
+            br
+              button.btn.btn-default.actions =' f.submit t('.submit.save')

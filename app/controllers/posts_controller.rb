@@ -37,7 +37,7 @@ class PostsController < ApplicationController
         format.json { render :show, status: :created, location: @post }
   # если не создали, то вернуть на созджание
       else
-        format.html { render :new }
+        format.html { render :new, danger: 'Не создано' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -51,7 +51,7 @@ class PostsController < ApplicationController
         format.html { redirect_to @post, notice: 'Пост был успешно обновлен.' }
         format.json { render :show, status: :ok, location: @post }
       else
-        format.html { render :edit }
+        format.html { render :edit, danger: 'Пост не обновлен' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
