@@ -12,10 +12,14 @@ nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
                 li.hidden
-                    a href="#page-top"
+                  a href="#page-top"
                 li.page-scroll
-                    a href="#about" Что знаем
+                  a href="#about" Что знаем
                 li.page-scroll
-                    a href="#contact" Регистрация
+                  a href="#check" Все статьи
+                li
+                  = link_to 'Посты', posts_path
+                li
+                  = link_to 'Новый пост', new_post_path
             /!.navbar-collapse
             /!.container-fluid

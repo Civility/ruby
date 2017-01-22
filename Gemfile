@@ -54,6 +54,10 @@ gem 'slim-rails'
 # bootstrap
 gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
+# всплывающие подсказки
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 # иконки fa-fa
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 #postgreSQL

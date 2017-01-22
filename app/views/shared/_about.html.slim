@@ -11,19 +11,22 @@ section#about
         .caption
           .caption-content
             i.fa.fa-search-plus.fa-3x
-        img.img-responsive alt="" src="img/portfolio/cabin.png"
+        img.img-responsive
+          =' link_to image_tag("pictures/cabin.png", alt: "1")
       .col-sm-4.portfolio-item
         a.portfolio-link data-toggle="modal" href="#aboutModal2"
         .caption
           .caption-content
             i.fa.fa-search-plus.fa-3x
-        img.img-responsive alt="" src="img/portfolio/cake.png"
+        img.img-responsive
+          =' link_to image_tag("pictures/satellite.png", alt: "2")
       .col-sm-4.portfolio-item
         a.portfolio-link data-toggle="modal" href="#aboutModal3"
         .caption
           .caption-content
             i.fa.fa-search-plus.fa-3x
-        img.img-responsive alt="" src="img/portfolio/circus.png"
+        img.img-responsive
+          =' link_to image_tag("pictures/ufo.png", alt: "3")
 /! Помощь модальные окна
 #aboutModal1.portfolio-modal.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
     .modal-content
@@ -36,7 +39,8 @@ section#about
                     .modal-body
                         h2 1 Проект
                         hr.star-primary
-                        img.img-responsive.img-centered alt="" src="img/portfolio/cabin.png"
+                        img.img-responsive.img-centered
+                          =' link_to image_tag("pictures/cabin.png", alt: "1")
                         p
                             | Текст
                             a href=""  ТУТ ссылка
@@ -55,7 +59,8 @@ section#about
                     .modal-body
                         h2 2 порект
                         hr.star-primary
-                        img.img-responsive.img-centered alt="" src="img/portfolio/cake.png"
+                        img.img-responsive.img-centered
+                          =' link_to image_tag("pictures/satellite.png", alt: "2")
                         p
                             | Текст
                             a href="" Ссылка
@@ -74,7 +79,8 @@ section#about
                     .modal-body
                         h2 Тема
                         hr.star-primary
-                        img.img-responsive.img-centered alt="" src="img/portfolio/circus.png"
+                        img.img-responsive.img-centered
+                          =' link_to image_tag("pictures/ufo.png", alt: "3")
                         p
                             | Текст
                             a href=""  Ccskrf

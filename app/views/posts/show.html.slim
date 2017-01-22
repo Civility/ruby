@@ -1,0 +1,16 @@
+.container
+  .col-lg-12.posts-header.text-center
+    h3 = @post.title
+
+    p#notice = notice
+    p
+      = @post.summary
+    hr
+    p
+      = @post.body
+
+.container
+  .col-lg-12
+    button.btn.btn-default = link_to 'править', edit_post_path(@post)
+    i.fa.fa-arrows-h
+    button.btn.btn-default = link_to 'обратно', posts_path

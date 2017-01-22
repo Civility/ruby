@@ -1,0 +1,8 @@
+.container
+  .col-lg-12.posts-header.text-center
+    h1 Новый пост
+  .row
+    .col-lg-12
+      == render 'form'
+      hr
+      button.btn.btn-default = link_to 'Обратно', posts_path

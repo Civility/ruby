@@ -1,11 +1,10 @@
 /! check in
-section#contact
+section#check
   .container
     .row
       .col-lg-12.text-center
-        h2 Регистрация
+        h2 = link_to 'Новый пост', new_post_path
         hr.star-primary
     .row
       .col-lg-8.col-lg-offset-2
-        /! Настройка регистрации
-        h3 тут будет все содержание регистрации
+        h5.text-center = link_to 'Все статьи', posts_path

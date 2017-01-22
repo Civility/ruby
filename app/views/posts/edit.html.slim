@@ -1,0 +1,11 @@
+.container
+  .col-lg-12.posts-header.text-center
+    h1 Редактор поста
+.col-lg-12.center-block
+  == render 'form'
+
+  button.btn.btn-default = link_to 'Показать пост', @post
+  |
+  i.fa.fa-arrows-h
+  button.btn.btn-default = link_to 'Обратно', posts_path
+
