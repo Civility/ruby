@@ -62,6 +62,8 @@ gem 'pg'
 gem 'carrierwave', '~> 1.0'
 # изменение размеров картинки https://github.com/minimagick/minimagick
 gem "mini_magick"
+# текстовый редактор
+gem 'trix'
 # Лучше отображает ошибки
 gem "better_errors"
 gem "binding_of_caller"

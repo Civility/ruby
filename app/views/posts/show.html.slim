@@ -6,9 +6,12 @@
     p
       = @post.summary
     hr
-    p
-      = @post.body
 
+    .img
+     = image_tag @post.image.url(:large) if @post.image?
+     = @post.body.html_safe
+.container
+  = render 'disqus'
 .container
   .col-lg-12
     button.btn.btn-default = link_to t('.show.fix'), edit_post_path(@post)

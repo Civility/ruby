@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :pictures, only: [:create, :destroy]
   # scope '(:locale)' do
   # scope "(:locale)" do #, :locale => /en|ru/ do
 

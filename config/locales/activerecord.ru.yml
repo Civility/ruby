@@ -7,11 +7,12 @@ ru:
         title: 'Заголовок'
         summary: 'Тематика'
         body: 'Cодержание'
-    errors:
-      messages:
-        blank: "Не может быть пустым"
     helpers:
       link:
         destroy: 'Удалить'
         edit: 'Править'
         show: 'Показать'
+    errors:
+      messages:
+        blank: "Не может быть пустым"
+        too_short: "Содержит меньше 2 символов"

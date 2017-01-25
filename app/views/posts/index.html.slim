@@ -10,12 +10,13 @@
           th= model_class.human_attribute_name(:Заголовок)
           th= model_class.human_attribute_name(:Тематика)
           th= model_class.human_attribute_name(:Содержание)
+          th= model_class.human_attribute_name(:Картинка)
           th= model_class.human_attribute_name(:Дата)
           th= t '.actions', default: t("helpers.Инструменты")
       tbody
       = render @posts
 
-/ вывели масив в _post.html.slim
+/ вывели цикл в _post.html.slim
 
         td = link_to 'Показать', post
         td = link_to 'править', edit_post_path(post)

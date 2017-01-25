@@ -3,14 +3,16 @@ ru:
     new:
       title: 'Новая статья'
       back: 'Вернуться'
-    edit:
-      title: 'Редактиорвание'
     index:
       title: 'Статьи'
     form:
       submit:
         save: 'Сохранить'
     edit:
+      title: 'Редактиорвание'
       edit:
         show_post: 'Показать пост'
+    show:
+      show:
+        fix: "Править"
   errors: 'При заполнении формы возникли ошибки'

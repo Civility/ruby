@@ -13,13 +13,13 @@
           form
             .form-group
               .input-group-addon = f.label :title
-              .form-control = f.text_field :title
+              .editor-mini = f.text_field :title
             .form-group
               .input-group-addon =' f.label :summary
-              .form-control =' f.text_area :summary
+              .editor-mini =' f.text_field :summary
             .form-group
               .input-group-addon =' f.label :body
-              .form-control =' f.text_area :body
+              .editor =' f.trix_editor :body
             .form-group
                =' f.file_field :image
             br

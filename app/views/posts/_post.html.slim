@@ -3,12 +3,14 @@
 /- @posts.each do |post|
 tr
   td = post.id
-  td = post.title
+  td = link_to post.title, post_path(post)
   td = post.summary
-  td = post.body
+  td = post.body.html_safe
+  td.clearfix
+    .img-thumbnail.thumb  = image_tag post.image.url (:thumb) if post.image?
   td = post.created_at.to_date.strftime("%d %B %Y")
   td
-    = link_to posts_path(post), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do
+    = link_to post_path(post), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do
       = fa_icon 'info'
     = link_to edit_post_path(post), class: 'btn btn-xs', title: "#{ t('.edit', default: t('helpers.links.edit')) }" do
       = fa_icon 'pencil'

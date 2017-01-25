@@ -1,0 +1,14 @@
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        <%# <1%# this.page.url = '<%= request.base.url + request.original_fullpath %2>'; %>
+        this.page.url = 'http://localhost.kz<%= request.original_fullpath %>';
+        this.page.identifier = '<%= @post.id %>';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//blogone-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
