@@ -67,3 +67,7 @@ gem 'trix'
 # Лучше отображает ошибки
 gem "better_errors"
 gem "binding_of_caller"
+group :production do
+  # For Heroku deployment
+  gem 'rails_12factor'
+end
