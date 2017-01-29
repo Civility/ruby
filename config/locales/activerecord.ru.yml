@@ -7,6 +7,8 @@ ru:
         title: 'Заголовок'
         summary: 'Тематика'
         body: 'Cодержание'
+        name: 'Имя'
+        password: 'Пароль'
     helpers:
       link:
         destroy: 'Удалить'
@@ -16,3 +18,4 @@ ru:
       messages:
         blank: "Не может быть пустым"
         too_short: "Содержит меньше 2 символов"
+        invalid: "Не действителен"

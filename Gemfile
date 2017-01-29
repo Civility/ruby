@@ -71,3 +71,5 @@ group :production do
   # For Heroku deployment
   gem 'rails_12factor'
 end
+# шифрования пароля в виде хэша пароля
+gem 'bcrypt-ruby'

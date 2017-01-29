@@ -16,3 +16,12 @@ ru:
       show:
         fix: "Править"
   errors: 'При заполнении формы возникли ошибки'
+  users:
+    form:
+      submit:
+        save: 'Сохранить'
+    new:
+      new_user_sign_up: 'Новый пользователь'
+  user:
+    new:
+      back: 'Вернуться'

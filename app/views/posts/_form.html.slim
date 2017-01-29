@@ -6,8 +6,8 @@
           /#error_explanation
           h6 = t( "#{pluralize(@post.errors.count, '.errors!')} ")
           ul
-            - @post.errors.full_messages.each do |message|
-              li = message
+            - @post.errors.full_messages.each do |msg|
+              li = msg
       .container
         .col-lg-12
           form

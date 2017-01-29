@@ -1,0 +1,18 @@
+.container
+  .col-lg-12.posts-header.text-center
+    - provide(:title, @user.name)
+    /p#notice = notice
+
+    p
+      strong = t('.name')
+      = @user.name
+    p
+      strong = t('.email')
+      = @user.email
+    p
+      strong Password:
+      = @user.password
+.container
+  .col-lg-12
+    i.fa.fa-arrows-h
+    button.btn.btn-default = link_to t('posts.new.back'), post_path

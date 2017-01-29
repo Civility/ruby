@@ -1,0 +1,24 @@
+.container
+  .col-lg-12
+    = form_for @user do |f|
+      - if @user.errors.any?
+        .alert.alert-danger
+          /#error_explanation
+          h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+          ul
+            - @user.errors.full_messages.each do |msg|
+              li = msg
+      .container
+        .col-lg-12
+          form
+            .form-group
+              .input-group-addon = f.label :name
+              .editor-mini = f.text_field :name
+            .form-group
+              .input-group-addon = f.label :email
+              .editor-mini = f.text_field :email
+            .form-group
+              .input-group-addon = f.label :password
+              .editor-mini = f.password_field :password
+        .text-center
+          .actions.btn.btn-default = f.submit t('.submit.save')
